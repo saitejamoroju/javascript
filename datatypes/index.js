@@ -291,5 +291,44 @@ const user={
  }
 //  console.log(secondval(arr));
 
+//-----------------------------
+
+const user={
+    username:"saiteja",
+    price:999,
+    welcomeMsg:function(){
+        // console.log(`${this.username }, welcome to web`);
+    }
+}
+user.welcomeMsg();
+user.username="tej"
+user.welcomeMsg();
+//In browser the global object is Window
+//open inspect (log(this))u can find window 
 
 
+//arrow function
+const chai=()=>{
+    let name="saiteja"
+    // console.log(this);
+}
+chai()
+
+//implicit return
+const addTwo=(n1,n2)=> n1+n2
+// console.log(addTwo(1,2));
+ 
+
+//IMMEDIATELY INVOKED FUNCTION EXPRESSION (IIFE)
+  //FUNCTION IS INVOKED IMMEDIATELY
+  //SOMETIMES WE HAVE problem with global scope variable pollution,so to avoid we use iife 
+
+  //Normal function
+  (function sai(){
+    console.log("DB connected");
+  })();
+//if use two iife we need to use semi colon after one iife
+  //Arrow function in IIFE
+  (()=>{
+    console.log("Db connected");
+  })()
