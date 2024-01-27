@@ -134,6 +134,27 @@ let myTimeStamp=Date.now()
 // console.log(Math.floor(Date.now()/1000));
 
 let newDate=new Date()
-console.log(newDate);
-console.log(newDate.getDay());
-console.log(newDate.getMonth());  
+// console.log(newDate);
+// console.log(newDate.getDay());
+// console.log(newDate.getMonth());  
+
+// arrays-----------------------------------------------
+
+const array=[1,2,3,4,5]
+const array1=['a','b','c','d']
+array.push(6);
+array.pop()
+// array.unshift(9)//added at the begining of the array
+
+
+const newarray=array.join()//this will convert into string
+// console.log(array);//[9,1,2,3,4,5]
+// console.log(newarray);//9,1,2,3,4,5
+
+const myn1=array.slice(1,3)
+console.log(myn1);//2,3
+
+const myn2=array.splice(1,3)
+console.log(myn2);//2,3,4
+
+console.log(array);
