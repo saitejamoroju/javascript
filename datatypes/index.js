@@ -115,4 +115,25 @@ const hundreds=1000000
 // console.log(Math.random()*100);
 
 //to get values from 10-20 //1 is added to avoid zero
-console.log(Math.floor(Math.random()*(20-10+1))+10);
+// console.log(Math.floor(Math.random()*(20-10+1))+10); 
+
+
+//date and time
+
+let myDate= new Date()
+// console.log(myDate);
+// console.log(myDate.toString());
+// console.log(myDate.toLocaleString());
+ 
+// let mycreateDate=new Date(2024,0,23,5,3)
+let mycreateDate=new Date("2023-01-14")
+// console.log(mycreateDate.toLocaleString());
+
+let myTimeStamp=Date.now()
+// console.log(myTimeStamp); 
+// console.log(Math.floor(Date.now()/1000));
+
+let newDate=new Date()
+console.log(newDate);
+console.log(newDate.getDay());
+console.log(newDate.getMonth());  
