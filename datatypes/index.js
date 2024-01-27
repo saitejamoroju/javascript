@@ -152,9 +152,144 @@ const newarray=array.join()//this will convert into string
 // console.log(newarray);//9,1,2,3,4,5
 
 const myn1=array.slice(1,3)
-console.log(myn1);//2,3
+// console.log(myn1);//2,3
 
 const myn2=array.splice(1,3)
-console.log(myn2);//2,3,4
+// console.log(myn2);//2,3,4
 
-console.log(array);
+// console.log(array);
+
+
+
+//----------------arrays part 2-----------------------
+
+
+const marvelheroes=['a','b','c']
+const dcheroes=['d','e','f']
+// marvelheroes.push(dcheroes)//['a','b','c',['d','e','f']]
+// console.log(marvelheroes[2][1]);//undefined
+// console.log(marvelheroes[3][1]);//'e'
+// console.log(marvelheroes);
+// marvelheroes.concat(dcheroes)//['a','b','c',['d','e','f']]
+// console.log(marvelheroes);
+
+
+//spread operator
+const allnewheros=[...marvelheroes, ...dcheroes]//[ 'a', 'b', 'c', 'd', 'e', 'f' ]
+// console.log(allnewheros);
+
+const anotherarray=[1,2,3,[4,5,6],7,[8,9,10]]
+const realanother=anotherarray.flat(Infinity)//infinity is depth of array need to be flatten
+// console.log(realanother);
+
+
+// console.log(Array.isArray("saiteja"));
+// console.log(Array.from("saiteja"));
+// console.log(Array.from({name:"saiteja"}));
+
+let score1=100
+let score2=200
+let score3=300
+// console.log(Array.of(score1,score2,score3));//converted into array
+
+
+
+//-----------------------------------objects
+//singleton 
+//object literals
+const JsUser={
+    name:"sai",
+    age:22,
+    location:"hyde",
+    email:"tejagmail.com",  
+}
+//way of accessing
+// console.log(JsUser.email);
+// console.log(JsUser["email"]);
+
+JsUser.email="abc@gmail.com"
+// Object.freeze(JsUser)
+// console.log(JsUser);
+
+JsUser.greeting=function() {
+    // console.log(`hello JS user ${this.age}`);
+}
+// console.log(JsUser.greeting());
+
+
+const regularUser={
+    email:"tejamoroju@gmail.com",
+    fullname:{
+        userfname:{
+            firstname:"sai",
+            lastname:"teja"
+        }
+    }
+}
+// console.log(regularUser.fullname.userfname.firstname);
+
+
+const obj1={1:'a',2:'b'}
+const obj2={3:'c',4:'d'}
+// const obj3={obj1,obj2}//combining of obj's
+const obj3=Object.assign({},obj1,obj2)//combining of obj's or use spread operator
+//{} -> is used that means all the ele in obj1,obj2 goes in to empty object
+// console.log(obj3);
+
+// objects part 2
+
+
+const course={
+    courseName:"js in hindi",
+    price:'999',
+    CourseInstructor:"sai"
+}
+const {CourseInstructor}=course
+// console.log(CourseInstructor);
+
+const navbar=({company})=>{}//parameters means de constructor
+
+
+
+//functions-------------------------------
+function addTwoNum(num1,num2){
+    return num1+num2
+}
+
+const res=addTwoNum(3,5)
+// console.log(`result ${res}`);
+
+
+//rest operator in function
+// function calculatePrice(...num1){
+//     return num1
+// }
+// console.log(calculatePrice(200,300,400,500));//[200,300,400,500]
+
+
+
+function calculatePrice(val1,val2,...num1){
+    return num1
+}
+// console.log(calculatePrice(200,300,400,500));//[400,500]->val1 takes 200 & val2 takes->300 
+
+/* 
+const user={
+    name:"sai",
+    price:199
+}
+ function handleObj(anyobj){
+    console.log(`username is ${anyobj.name} and price is ${anyobj.price}`);
+    // username is sai and price is 199
+ }
+ handleObj(user)
+ */
+
+ const arr=[200,300,400]
+ function secondval(array){
+    return array[1]
+ }
+//  console.log(secondval(arr));
+
+
+
