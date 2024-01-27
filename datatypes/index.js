@@ -81,5 +81,38 @@
 // const age=21
 // console.log(`My name is ${name} and my age is ${age}`);
 //------------------------------------------------------------
-// const gameName=new String('saiteja')
-// console.log(gameName); //creation of string in the form of object and key value pair
+const gameName=new String('abcdefg')////creation of string in the form of object and key value pair
+// console.log(gameName); 
+// console.log(gameName.toUpperCase());
+
+const newString=gameName.substring(0,4)
+// console.log(newString);
+
+const newString1=gameName.slice(-6,4)
+// console.log(newString1);
+
+const string="           saiteja           ";
+// console.log(string.trim());
+
+const str="https://tejamoro%20@gmail.com"
+// console.log(str.replace('%20','ju'));
+
+//------------------------Numbers & Math-------------
+
+const score=400
+// console.log(score);
+
+const balance= new Number(100)
+// console.log(balance);
+
+// console.log(balance.toString());
+// console.log(balance.toFixed(2));
+
+const hundreds=1000000
+// console.log(hundreds.toLocaleString('en-IN'));//10,00,000 
+
+// console.log(Math.random());
+// console.log(Math.random()*100);
+
+//to get values from 10-20 //1 is added to avoid zero
+console.log(Math.floor(Math.random()*(20-10+1))+10);
