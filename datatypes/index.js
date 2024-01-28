@@ -325,10 +325,155 @@ const addTwo=(n1,n2)=> n1+n2
 
   //Normal function
   (function sai(){
-    console.log("DB connected");
+    // console.log("DB connected");
   })();
 //if use two iife we need to use semi colon after one iife
   //Arrow function in IIFE
   (()=>{
-    console.log("Db connected");
+    // console.log("Db connected");
   })()
+
+
+
+
+  //control statements -------------------------------------------
+  //falsy values
+  // false,0,-0,BigInt 0n,"",null,undefined,NaN
+  //true values
+  //true,1,"0"'false',[],{},
+
+  //loops-----------------------------------------------------
+  
+  
+  
+  //for of loop
+  const ar=[1,2,3,4,5]
+for (const i of ar) {
+    // console.log(i);   
+}
+
+//Map 
+const map=new Map()
+map.set('IN',"india")
+map.set('usa',"united state....")
+// console.log(map);
+for (const [key,value] of map) {
+    // console.log(key,value);
+}
+
+
+const myObj={
+    js:"javascript",
+    cpp:"c++",
+    rb:"ruby"
+}
+//to run this we need for in loop
+for (const key in myObj) {
+    // console.log(`${key} and value ${myObj[key]}`);     
+}
+
+
+
+//for each using call back function
+const coding=["js","ruby","java","python","cpp"]
+coding.forEach(function (para) {
+    // console.log(para);
+})
+
+// using arrow function
+coding.forEach((it)=>{
+    // console.log(it);
+})
+
+//---------------or
+function print(it){
+    //  console.log(it);
+    }
+coding.forEach(print)
+
+
+
+coding.forEach((it,idx,arr)=>{
+    // console.log(it,idx,arr);
+
+})
+
+
+
+
+
+const mycoding =[
+    {
+    languageName:"abc",
+    langfilename:"js", 
+    },
+    {
+        languageName:"abc",
+        langfilename:"js", 
+    },
+    {
+        languageName:"abc",
+        langfilename:"js", 
+    },
+]
+mycoding.forEach((item)=>{
+    // console.log(item.languageName);
+})
+
+//filter-------------------------------------
+
+const myNums=[1,2,3,4,5,6,7,8,9,10]
+const store=myNums.filter((it)=>{
+    return it>4
+})
+// console.log(store);
+
+
+const books = [
+    { title: 'Book One', genre: 'Fiction', publish: 1981, edition: 2004 },
+    { title: 'Book Two', genre: 'Non-Fiction', publish: 1992, edition: 2008 },
+    { title: 'Book Three', genre: 'History', publish: 1999, edition: 2007 },
+    { title: 'Book Four', genre: 'Non-Fiction', publish: 1989, edition: 2010 },
+    { title: 'Book Five', genre: 'Science', publish: 2009, edition: 2014 },
+    { title: 'Book Six', genre: 'Fiction', publish: 1987, edition: 2010 },
+    { title: 'Book Seven', genre: 'History', publish: 1986, edition: 1996 },
+    { title: 'Book Eight', genre: 'Science', publish: 2011, edition: 2016 },
+    { title: 'Book Nine', genre: 'Non-Fiction', publish: 1981, edition: 1989 },
+  ];
+
+const storing=books.filter((it)=>it.genre==='History')//no scope so return not required
+// console.log(storing);
+
+
+const bookstore=books.filter((it)=>{ //we have scope so return required else empty array will be printed
+    return it.publish>=2000
+})
+// console.log(bookstore);
+
+
+
+const myNumber=[1,2,3,4,5,6,7,8,9,10]
+const storemyNumber=myNumber
+        .map((it)=>it*10)
+        .map((it)=>it+1)
+        .filter((it)=>it>=30)
+// console.log(storemyNumber);
+
+
+
+
+
+//reduce ---------------------------------------
+
+ const mNums=[1,2,3]
+const total=mNums.reduce(function(acc,curr){
+    // console.log(`acc:${acc} and curr val ${curr}`);
+    return acc+curr
+},0)
+
+
+const total1=mNums.reduce((acc,curr)=>{
+    console.log(`acc:${acc} and curr val ${curr}`);
+    return acc+curr
+},0)
+console.log(total1);//6
