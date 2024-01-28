@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    </head>
+    <body>
+        <div class="parent">
+            <div class="days">Monday</div>
+            <div class="days">Tuesday</div>
+            <div class="days">wednesday</div>
+        </div>
+    </body>
+    <script>
+        const ele=document.querySelector('.parent')
+        // console.log(ele.children)
+        // console.log(ele.children[1].innerText)
+        // console.log(ele.children[1].innerHTML)
+
+
+        for (let i = 0; i < ele.children.length; i++) {
+            // console.log(ele.children[i].innerHTML);  
+        }
+        ele.children[1].style.color="orange"
+        console.log(ele.firstElementChild);
+        console.log(ele.lastElementChild);
+
+        const dayOne=document.querySelector('.days')
+        // console.log(dayOne);
+        // console.log(dayOne.parentElement);
+        // console.log(dayOne.parentElementSibling);
+        console.log("Nodes: ",ele.childNodes);
+    </script>
+</html>
