@@ -115,7 +115,7 @@ function getData(getId){
 async function getAllData(){
     await getData(1)
     await getData(2)
-    for(let i=0;i<5;i++)
+    
         await getData(i);
 }
 getAllData();
